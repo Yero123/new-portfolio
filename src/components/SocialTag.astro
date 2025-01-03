@@ -1,0 +1,11 @@
+---
+const { url } = Astro.props;
+---
+
+<a href={url} target="_blank">
+  <div
+    class="bg-[#4A5052] rounded-full p-2 h-10 w-10 flex justify-center items-center"
+  >
+    <slot />
+  </div>
+</a>

@@ -1,0 +1,68 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+// const EXPERIENCE = [
+//   {
+//     date: "Actualmente...",
+//     title: "Multilingual Interpreters and Translators",
+//     company: "Twitch",
+//     description:
+//       "Divulgo sobre programación y desarrollo web en diferentes plataformas. Galardonado como mejor creador de contenido de habla no-inglesa en 2022 y mejor comunidad en 2023 por GitHub.",
+//     link: "https://twitch.tv/midudev",
+//   },
+//   {
+//     date: "Septiembre 2022",
+//     title: "Principal Frontend Engineer",
+//     company: "Adevinta Spain",
+//     description:
+//       "Responsable de la plataforma, componentes y utilidades para la creación y desarrollo de aplicaciones web. Mejora de un 30% en la entrega de software. Implantación de medidas de integración continua y despliegue con A/B testing en más de 15 equipos.",
+//   },
+// ]
+const EXPERIENCE = [
+  {
+    date: "Marzo 2024 - Presente",
+    title: "Full-stack Developer",
+    company: "Kedo!",
+    description: `
+      Desarrollo de backend en NestJS y frontend en Next.js, mejorando la experiencia de usuarios y proveedores. Creación de un CRM interno y landing pages corporativas para optimizar la presencia online y atraer nuevos usuarios.
+    `,
+    link: "https://www.linkedin.com/in/naveed-cuellar-66b4b4218/",
+  },
+  {
+    date: "Enero 2021 - Presente",
+    title: "Co-Founder",
+    company: "Quinti",
+    description: `
+      Creación de una app de delivery en Flutter para áreas remotas, conectando negocios locales con nuevos clientes. App con más de 5k de descargas.
+    `,
+    link: "https://www.linkedin.com/in/naveed-cuellar-66b4b4218/",
+  },
+  {
+    date: "Agosto 2023 - Agosto 2024",
+    title: "Full-stack Developer",
+    company: "Multilingual Interpreters and Translators",
+    description: `
+      Lideré el desarrollo de un LMS usando NestJS y Next.js, con SSR y autenticación segura. Coordinación con stakeholders para garantizar objetivos claros y funcionalidad eficiente.
+    `,
+    link: "https://www.linkedin.com/in/naveed-cuellar-66b4b4218/",
+  },
+  {
+    date: "Agosto 2021 - Agosto 2023",
+    title: "Frontend Developer Jr",
+    company: "Multilingual Interpreters and Translators",
+    description: `
+      Migración de software desde C++ a Next.js, mejorando la experiencia de usuario. Implementación de notificaciones en tiempo real y un módulo de chat con Firebase.
+    `,
+    link: "https://www.linkedin.com/in/naveed-cuellar-66b4b4218/",
+  },
+];
+---
+
+<ol class="relative mt-16 pl-8 md:pl-0">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>

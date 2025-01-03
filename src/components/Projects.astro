@@ -1,0 +1,243 @@
+---
+import GitHub from "./icons/GitHub.astro";
+import NextJS from "./icons/NextJS.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import Link from "./icons/Link.astro";
+import LinkButton from "./LinkButton.astro";
+import NestJS from "./icons/NestJS.astro";
+import Typescript from "./icons/Typescript.astro";
+import Firebase from "./icons/Firebase.astro";
+import PrismaORM from "./icons/PrismaORM.astro";
+import Postgress from "./icons/Postgress.astro";
+import Flutter from "./icons/Flutter.astro";
+import Dart from "./icons/Dart.astro";
+
+const TAGS = {
+  NEXT: {
+    name: "Next.js",
+    class: "bg-black text-white",
+    icon: NextJS,
+    iconType: "svg",
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: Tailwind,
+    iconType: "svg",
+  },
+  NEST: {
+    name: "Nest.js",
+    class: "bg-red-600/40 text-white backdrop-blur-md",
+    icon: NestJS,
+    iconType: "svg",
+  },
+  TYPESCRIPT: {
+    name: "TypeScript",
+    class: "bg-[#007ACC] text-white",
+    icon: Typescript,
+  },
+  FIREBASE: {
+    name: "Firebase",
+    class: "bg-[#FFCA28]/80 text-black",
+    icon: Firebase,
+  },
+  PRISMA: {
+    name: "Prisma ORM",
+    class: "bg-[#0C344B] text-white",
+    icon: PrismaORM,
+  },
+  POSTGRES: {
+    name: "PostgreSQL",
+    class: "bg-[#336791] text-white",
+    icon: Postgress,
+  },
+  FLUTTER: {
+    name: "Flutter",
+    class: "bg-[#02569B] text-white",
+    icon: Flutter,
+  },
+  DART: {
+    name: "Dart",
+    class: "bg-[#0175C2] text-white",
+    icon: Dart,
+  },
+};
+
+const PROJECTS = [
+  {
+    title: "Quinti - App de delivery de comida",
+    description:
+      "App de delivery en Flutter para áreas remotas. Conexión de negocios locales con nuevos clientes. Con más de 5k descargas.",
+    link: "https://quinti.vercel.app/",
+    github: "https://github.com/pheralb/svgl",
+    image: "/projects/proq.png",
+    tags: [TAGS.FIREBASE, TAGS.FLUTTER, TAGS.DART, TAGS.TAILWIND],
+  },
+  {
+    title: "Carta virtual interactiva - ProCarta",
+    description:
+      "Carta virtual interactiva para restaurantes. Diseño de menús digitales con opciones de personalización y pedidos online. Desarrollado con Next.js y Tailwind CSS.",
+    link: "https://carta-digital-drab.vercel.app/carlos",
+    image: "/projects/procarta.png",
+    tags: [TAGS.NEXT,TAGS.TYPESCRIPT, TAGS.TAILWIND, TAGS.NEST, TAGS.PRISMA, TAGS.POSTGRES],
+  },
+  {
+    title: "Quinti Web - Marketplace para Restaurantes",
+    description:
+      "Versión web de Quinti, adaptada con Next.js, Firebase, Tailwind CSS y TypeScript para optimizar la experiencia de usuarios y restaurantes.",
+    link: "https://deliverymanchay.vercel.app/delivery",
+    image: "/projects/quieweb.jpg",
+    tags: [TAGS.NEXT, TAGS.FIREBASE, TAGS.TAILWIND, TAGS.TYPESCRIPT],
+  },
+  {
+    title: "Landing Page - Quinti",
+    description:
+      "Landing page para presentar la app de Quinti y atraer usuarios y restaurantes. Explicación clara de sus beneficios.",
+    link: "https://quinti.vercel.app/",
+    image: "/projects/quilanding.png",
+    tags: [TAGS.NEXT, TAGS.TAILWIND],
+  },
+  {
+    title: "Temporaly - MVP de Venta de Fruta por Temporada",
+    description:
+      "MVP para un negocio de venta de frutas de temporada al sector C y B. Incluye pruebas de usabilidad y efectividad.",
+    link: "https://temporaly.vercel.app/",
+    image: "/projects/Temporaly.png",
+    tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.FIREBASE],
+  },
+];
+
+let visibleProjects = PROJECTS; // Inicialmente mostrar solo 2 proyectos
+let showMore = false;
+---
+
+<div class="flex flex-col gap-y-16 p-8 md:p-0">
+  {
+    visibleProjects.map(
+      ({ image, title, description, tags, link, github }, i) => (
+        <article
+          class={`flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0 ${i > 2 ? "hidden" : ""}`}
+        >
+          <div class="w-full md:w-1/2">
+            <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+              <img
+                alt="Proyecto"
+                class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+                // loading="lazy"
+                src={image}
+              />
+            </div>
+          </div>
+
+          <div class="w-full md:w-1/2 md:max-w-lg">
+            <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+              {title}
+            </h3>
+            <div class="flex flex-wrap mt-2">
+              <ul class="flex flex-row mb-2 gap-x-2 flex-wrap">
+                {tags.map((tag) => (
+                  <li class="mb-2">
+                    <span
+                      class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                    >
+                      <tag.icon class="size-4" />
+                      {tag.name}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+
+              <div class="mt-2 text-gray-700 dark:text-gray-400">
+                {description}
+              </div>
+              <footer class="flex items-end justify-start mt-4 gap-x-4">
+                {link && (
+                  <LinkButton href={link}>
+                    <Link class="size-4" />
+                    Preview
+                  </LinkButton>
+                )}
+              </footer>
+            </div>
+          </div>
+        </article>
+      )
+    )
+  }
+
+  <!-- <p
+    class="flex justify-center text-primary cursor-pointer mt-4"
+    id="toggle-button"
+  >
+    {showMore ? "Ver menos proyectos" : "Ver más proyectos"}
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="w-5 icon icon-tabler icon-tabler-chevron-right"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      stroke-width="2"
+      stroke="currentColor"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M9 6l6 6l-6 6"></path>
+    </svg>
+  </p> -->
+</div>
+<script>
+  // const toggleButton:any = document.getElementById("toggle-button");
+  // const allProjects = document.querySelectorAll("article");
+  // let showingAll = false;
+  
+  // // Lazy loading fix: forzar carga de imágenes cuando son visibles
+  // const images = document.querySelectorAll("img");
+  
+  // const loadImage = (img:any) => {
+  //   if (img.hasAttribute("data-src")) {
+  //     img.src = img.getAttribute("data-src");
+  //     img.removeAttribute("data-src");
+  //   }
+  // };
+
+  // const observer = new IntersectionObserver((entries) => {
+  //   entries.forEach((entry) => {
+  //     if (entry.isIntersecting) {
+  //       const img = entry.target;
+  //       loadImage(img);
+  //       observer.unobserve(img);
+  //     }
+  //   });
+  // });
+
+  // images.forEach((image) => {
+  //   observer.observe(image);
+  // });
+
+  // allProjects.forEach((project, index) => {
+  //   if (index >= 2) {
+  //     project.classList.add("hidden");
+  //   }
+  // });
+
+  // toggleButton.textContent = "Ver más proyectos";
+  // toggleButton.addEventListener("click", () => {
+  //   showingAll = !showingAll;
+
+  //   if (showingAll) {
+  //     allProjects.forEach((project) => {
+  //       project.classList.remove("hidden");
+  //     });
+  //     toggleButton.textContent = "Ver menos proyectos";
+  //   } else {
+  //     allProjects.forEach((project, index) => {
+  //       if (index >= 2) {
+  //         project.classList.add("hidden");
+  //       }
+  //     });
+  //     toggleButton.textContent = "Ver más proyectos";
+  //   }
+  // });
+</script>

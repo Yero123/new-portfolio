@@ -1,11 +1,92 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import SocialTag from "@/components/SocialTag.astro";
+import Welcome from "../components/Welcome.astro";
+import Layout from "../layouts/Layout.astro";
+import GitHub1 from "@/components/icons/GitHub1.astro";
+import LinkedIn2 from "@/components/icons/LinkedIn2.astro";
+import Youtube from "@/components/icons/Youtube.astro";
+import Instagram from "@/components/icons/Instagram.astro";
+import Briefcase from "@/components/icons/Briefcase.astro";
+import TitleSection from "@/components/TitleSection.astro";
+import SectionContainer from "@/components/SectionContainer.astro";
+import Projects from "@/components/Projects.astro";
+import Experience from "@/components/Experience.astro";
+import ProfileCheck from "@/components/icons/ProfileCheck.astro";
+import AboutMe from "@/components/AboutMe.astro";
+import Desktop from "@/components/icons/Desktop.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout >
+  <div style="background: url('/images/backg.png') repeat center top; background-size: auto;" class="w-full h-[270vh] flex items-center justify-center absolute top-0 left-0 z-[-1]">
+  </div>
+  <div
+    class="flex flex-col mt-20 md:flex-row-reverse md:items-center md:justify-between lg:mt-[6rem] lg:mb-[8rem]"
+   
+  >
+    <div>
+      <img
+        class="rounded-full shadow-lg w-[250px] h-[250px] mx-auto md:w-[450px] md:h-[450px]"
+        src="/images/yero.png"
+        alt="Yerodin Cuellar"
+      />
+    </div>
+    <div class="p-16 lg:pl-0 lg:pt-32">
+      <h1 class="text-3xl font-black lg:text-6xl">
+        Soy<div class="p-[0.5rem]"></div> Yerodin <span class="text-primary"
+          >Cuellar</span
+        >
+      </h1>
+      <div
+        class="h-2 w-[60%] md:w-[200px] bg-primary mt-4 mb-4 lg:mt-6 lg:mb-4 rounded-full"
+      >
+      </div>
+      <p class="font-semibold lg:text-2xl">Desarrollador Full stack</p>
+      <p class="font-light mt-4 lg:max-w-[600px] md:text-xl text-[#f3f3f3]">
+        +3 años de experiencia. Ingeniero Informatico esapecializado en
+        desarrollo de webs
+      </p>
+      <div class="flex justify-center md:justify-start">
+        <div class="flex gap-3 mt-4">
+       
+          <SocialTag url="https://www.linkedin.com/in/naveed-cuellar-66b4b4218">
+            <LinkedIn2 class="w-8 h-8" />
+          </SocialTag>
+          <SocialTag url="https://github.com/Yero123">
+            <GitHub1 class="w-8 h-8" />
+          </SocialTag>
+          <SocialTag url="https://instagram.com">
+            <Instagram class="w-8 h-8" />
+          </SocialTag>
+          <!-- <SocialTag url="https://youtube.com">
+            <Youtube class="w-8 h-8" />
+          </SocialTag> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <SectionContainer id="experiencia">
+    <TitleSection>
+      <Briefcase class="size-8" />
+      Experiencia laboral
+    </TitleSection>
+    <Experience />
+  </SectionContainer>
+  <SectionContainer id="proyectos">
+    <TitleSection>
+      <Desktop class="size-7 " />
+      Proyectos
+    </TitleSection>
+    <Projects />
+  </SectionContainer>
+
+  <SectionContainer id="sobre-mi">
+    <TitleSection>
+      <ProfileCheck class="size-8" />
+      Sobre mí
+    </TitleSection>
+    <AboutMe />
+  </SectionContainer>
 </Layout>
