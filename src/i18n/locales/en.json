@@ -1,0 +1,63 @@
+{
+    "experience": "Experience",
+    "her_projects": "Projects",
+    "about_me": "About me",
+    "contact": "Contact",
+    "name": "Yerodin Cuellar",
+    "i_am": "I am",
+    "full_stack_developer": "Full Stack Developer",
+    "experience_text": "+3 years of experience. Computer Engineer specialized in web development",
+    "work_experience": "Work Experience",
+    "experiences": [
+      {
+        "position": "Full-stack Developer",
+        "company": "Kedo!",
+        "date": "March 2024 - Present",
+        "description": "Backend development in NestJS and frontend in Next.js, improving the experience for users and providers. Creation of an internal CRM and corporate landing pages to optimize online presence and attract new users."
+      },
+      {
+        "position": "Co-Founder",
+        "company": "Quinti",
+        "date": "January 2021 - Present",
+        "description": "Created a Flutter-based delivery app for remote areas, connecting local businesses with new customers. App with over 5k downloads."
+      },
+      {
+        "position": "Full-stack Developer",
+        "company": "Multilingual Interpreters and Translators",
+        "date": "August 2023 - August 2024",
+        "description": "Led the development of an LMS using NestJS and Next.js with SSR and secure authentication. Coordinated with stakeholders to ensure clear objectives and efficient functionality."
+      },
+      {
+        "position": "Frontend Developer Jr",
+        "company": "Multilingual Interpreters and Translators",
+        "date": "August 2021 - August 2023",
+        "description": "Migrated software from C++ to Next.js, improving user experience. Implemented real-time notifications and a chat module using Firebase."
+      }
+    ],
+    "projects": [
+      {
+        "name": "Quinti - Food Delivery App",
+        "technologies": ["Firebase", "Flutter", "Dart", "Tailwind CSS"],
+        "description": "Food delivery app in Flutter for remote areas. Connecting local businesses with new customers. Over 5k downloads."
+      },
+      {
+        "name": "Interactive Virtual Menu - ProCarta",
+        "technologies": [
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "Nest.js",
+          "Prisma ORM",
+          "PostgreSQL"
+        ],
+        "description": "Interactive virtual menu for restaurants. Digital menu design with customization options and online ordering. Developed with Next.js and Tailwind CSS."
+      },
+      {
+        "name": "Quinti Web - Marketplace for Restaurants",
+        "technologies": ["Next.js", "Firebase", "Tailwind CSS", "TypeScript"],
+        "description": "Web version of Quinti, adapted with Next.js, Firebase, Tailwind CSS, and TypeScript to optimize the experience for users and restaurants."
+      }
+    ],
+    "about_me_text": "My name is Yerodin, and I am passionate about software development with over three years of experience in creating applications and technological solutions.\n\nSome of my achievements include co-founding Quinti, a delivery app designed to connect local businesses in remote areas with new customers, and leading the development of an LMS at Multilingual Interpreters and Translators, optimizing processes and enhancing user experience.\n\nCurrently, at Kedo!, I am contributing to the company's growth by developing a robust backend, an internal CRM, and landing pages that improve online presence and attract new users. My focus is always on balancing technical performance with sound business judgment."
+  }
+  
