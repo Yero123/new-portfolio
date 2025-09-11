@@ -1,0 +1,212 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <title>Quinti - Bienvenido</title>
+        <meta name="description" content="Tu asistente para entrenamientos y progreso personal." />
+    
+        <!-- Open Graph para compartir en redes -->
+        <meta property="og:title" content="Mi App Quinti - Bienvenido" />
+        <meta property="og:description" content="Tu asistente para entrenamientos y progreso personal." />
+        <meta property="og:image" content="/preview.png" />
+        <meta property="og:type" content="website" />
+        
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="/faviconq.ico" />
+      </head>
+  <!-- Hero -->
+   
+<div class="w-full bg-white text-slate-900">
+
+  <section class="pt-20 pb-16 md:pt-28 md:pb-20">
+    <div class="mx-auto max-w-5xl px-6 text-center">
+      <div
+        class="inline-flex items-center gap-2 rounded-full bg-[#c084fc]/10 px-4 py-2 text-sm text-[#a855f7]"
+      >
+        <span>Quinti</span>
+        <span class="text-[#c084fc]">Delivery en zonas alejadas</span>
+      </div>
+      <h1 class="mt-6 text-4xl font-black leading-tight md:text-6xl">
+        Pide tus <span class="text-[#c084fc]">antojos</span> en zonas alejadas
+      </h1>
+      <p
+        class="mx-auto mt-4 max-w-2xl text-base font-light text-slate-700 md:text-lg"
+      >
+        La app delivery que llega a zonas alejadas de Lima: Manchay, Cieneguilla
+        y más. Rápido, seguro y pensado para tu barrio.
+      </p>
+      <div class="mt-8 flex items-center justify-center gap-3">
+        <a
+          href="#legal"
+          class="rounded-full bg-[#c084fc] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-[#b176fb] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#c084fc]"
+          aria-label="Ir a información legal de Quinti"
+          tabindex="0"
+        >
+          Ver información legal
+        </a>
+        <a
+          href="#contacto"
+          class="rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-slate-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#c084fc]"
+          aria-label="Ir a contacto"
+          tabindex="0"
+        >
+          Contacto
+        </a>
+      </div>
+      <div class="self-center justify-self-center lg:flex gap-5">
+        <img
+          class="self-center hidden justify-self-center pt-6 ml-3 lg:block lg:pt-[10rem]"
+          src="images/mockup3.png"
+          width="250.84"
+          height="507.56"
+          alt="App Quinti"
+        />
+        <img
+          class="self-center justify-self-center pt-6 ml-3"
+          src="images/mockup.png"
+          width="250.84"
+          height="507.56"
+          alt="App Quinti"
+        />
+        <img
+          class="self-center hidden justify-self-center pt-6 ml-3 lg:block lg:pt-[10rem]"
+          src="images/mockup2.png"
+          width="250.84"
+          height="507.56"
+          alt="App Quinti"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Beneficios / categorías (texto solamente) -->
+  <section class="py-16 md:py-20">
+    <div class="mx-auto max-w-6xl px-6">
+      <h2 class="text-center text-3xl font-extrabold md:text-4xl">
+        Todo tipo de <span class="text-[#c084fc]">variedad</span>
+      </h2>
+      <div class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
+        <article
+          class="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200"
+        >
+          <h3 class="text-xl font-bold">Hamburgueserías y Pizzerías</h3>
+          <p class="mt-2 text-sm text-slate-600">
+            Encuentra tus favoritos para cualquier antojo: combos, pizzas,
+            salsas y más.
+          </p>
+        </article>
+        <article
+          class="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200"
+        >
+          <h3 class="text-xl font-bold">Pollerías y chifas</h3>
+          <p class="mt-2 text-sm text-slate-600">
+            Desde pollo a la brasa hasta chaufa y tallarines. Sabores que te
+            acompañan siempre.
+          </p>
+        </article>
+        <article
+          class="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200"
+        >
+          <h3 class="text-xl font-bold">Calderías y mucho más</h3>
+          <p class="mt-2 text-sm text-slate-600">
+            Sopas, guisos y platos caseros para compartir en familia.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reseñas (texto) -->
+  <section class="py-16 md:py-20">
+    <div class="mx-auto max-w-6xl px-6">
+      <h2 class="text-center text-3xl font-extrabold md:text-4xl">
+        Conoce las <span class="text-[#c084fc]">reseñas</span> de los restaurantes
+      </h2>
+      <div class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
+        <div class="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
+          <p class="text-sm">
+            “Me gustó mucho el chaufa especial. Uno de los mejores chifas de
+            Manchay.”
+          </p>
+          <p class="mt-3 text-xs text-slate-500">Dayton Cuellar · Reseñador@</p>
+        </div>
+        <div class="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
+          <p class="text-sm">
+            “Pedí makis, llegaron puntuales y estuvo agradable. Compartí con los
+            que más quiero.”
+          </p>
+          <p class="mt-3 text-xs text-slate-500">
+            Milagros Albornos · Reseñador@
+          </p>
+        </div>
+        <div class="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
+          <p class="text-sm">“Muy buen servicio, delicioso sabor.”</p>
+          <p class="mt-3 text-xs text-slate-500">Luis Fernando · Reseñador@</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Información legal -->
+  <section id="legal" class="py-16 md:py-20">
+    <div class="mx-auto max-w-4xl px-6">
+      <h2 class="text-center text-3xl font-extrabold md:text-4xl">
+        Información <span class="text-[#c084fc]">legal</span>
+      </h2>
+      <div
+        class="mt-8 divide-y divide-slate-200 overflow-hidden rounded-2xl bg-white ring-1 ring-slate-200"
+      >
+        <div class="grid grid-cols-1 gap-4 p-6 md:grid-cols-3">
+          <p class="text-sm font-semibold text-[#a855f7]">Nombre legal</p>
+          <p class="md:col-span-2 text-sm">QUINTI INC- TECHNOLOGIES S.A.C.</p>
+        </div>
+        <div class="grid grid-cols-1 gap-4 p-6 md:grid-cols-3">
+          <p class="text-sm font-semibold text-[#a855f7]">RUC</p>
+          <p class="md:col-span-2 text-sm">20609938804</p>
+        </div>
+        <div class="grid grid-cols-1 gap-4 p-6 md:grid-cols-3">
+          <p class="text-sm font-semibold text-[#a855f7]">Dirección</p>
+          <p class="md:col-span-2 text-sm">CAL.CALLE SAYCUSCA NRO. 137 DPTO. 501 URB. MARANGA (URB MARANGA) LIMA - LIMA - LIMA</p>
+        </div>
+        <div class="grid grid-cols-1 gap-4 p-6 md:grid-cols-3">
+          <p class="text-sm font-semibold text-[#a855f7]">Email de contacto</p>
+          <p class="md:col-span-2 text-sm">
+            yerodince@gmail.com
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="pb-24">
+    <div class="mx-auto max-w-4xl px-6 text-center">
+      <h3 class="text-2xl font-bold">¿Necesitas ayuda?</h3>
+      <p class="mt-2 text-sm text-slate-600">
+        Escríbenos y con gusto te atenderemos.
+      </p>
+      <div
+        class="mt-6 flex flex-col items-center justify-center gap-3 md:flex-row"
+      >
+        <!-- <a
+          href="#legal"
+          class="rounded-full bg-[#c084fc] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-[#b176fb] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#c084fc]"
+          aria-label="Ver información legal"
+          tabindex="0"
+        >
+          Ver información legal
+        </a> -->
+      </div>
+      <p class="mt-6 text-xs text-slate-500">
+        © {new Date().getFullYear()} Quinti. Todos los derechos reservados.
+      </p>
+    </div>
+  </section>
+</div>
+</html>
